@@ -10,7 +10,6 @@ export default function About(){
 
   const [open, setOpen] = useState(false)
   
-  // CORREÇÃO: Tipando o useRef como um elemento de seção HTML
   const aboutRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
