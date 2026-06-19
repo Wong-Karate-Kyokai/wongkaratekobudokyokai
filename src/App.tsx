@@ -5,6 +5,9 @@ import About from "./pages/About"
 import Karate from "./pages/Karate"
 import Videos from "./pages/Videos"
 import Contact from "./pages/Contact"
+import Gallery from "./pages/Gallery"
+import News from "./pages/News"
+import NewsDetails from "./pages/NewsDetails"
 
 function App() {
 
@@ -18,6 +21,17 @@ function App() {
         <Route path="/karate" element={<Karate />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/contato" element={<Contact />} />
+        <Route path="/galeria" element={<Gallery />} />
+        <Route
+  path="/noticias"
+  element={<News />}
+/>
+
+<Route
+  path="/noticias/:slug"
+  element={<NewsDetails />}
+/>
+        
 
       </Routes>
 

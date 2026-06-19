@@ -88,18 +88,31 @@ export default function Navbar(){
           </li>
 
           <li>
+            <Link
+              to="/noticias"
+              onClick={() => setOpen(false)}
+            >
+              NOTÍCIAS
+            </Link>
+          </li>
+          <li>
+            <Link to="/galeria" onClick={() => setOpen(false)}>
+              GALERIA
+            </Link>
+          </li>
+
+          <li>
             <Link to="/karate" onClick={() => setOpen(false)}>
               O KARATE
             </Link>
           </li>
-
-          {/* <li>NOTÍCIAS</li> */}
 
           <li>
             <HashLink smooth to="/#video" onClick={() => setOpen(false)}>
               VÍDEOS
             </HashLink>
           </li>
+
 
           <li>
             <HashLink smooth to="/#contato" onClick={() => setOpen(false)}>

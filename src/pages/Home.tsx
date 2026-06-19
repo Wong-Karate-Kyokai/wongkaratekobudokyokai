@@ -3,11 +3,11 @@ import { useLocation } from "react-router-dom"
 
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
-// import FocusSection from "../components/FocusSection"
+import HomeNews from "../components/HomeNews"
+import About from "./About"
 import VideoLibrary from "../components/VideoLibrary"
 import HireSection from "../components/HireSection"
 import Footer from "../components/Footer"
-import About from "./About"
 
 export default function Home(){
 
@@ -17,12 +17,20 @@ export default function Home(){
 
     if(location.state?.scrollTo){
 
-      const element = document.getElementById(location.state.scrollTo)
+      const element = document.getElementById(
+        location.state.scrollTo
+      )
 
       if(element){
+
         setTimeout(() => {
-          element.scrollIntoView({ behavior: "smooth" })
+
+          element.scrollIntoView({
+            behavior: "smooth"
+          })
+
         }, 100)
+
       }
 
     }
@@ -34,11 +42,17 @@ export default function Home(){
     <div id="top">
 
       <Navbar/>
+
       <Hero/>
+
+      <HomeNews/>
+
       <About/>
-      <VideoLibrary/> 
-      {/* <FocusSection/> */}
+
+      <VideoLibrary/>
+
       <HireSection/>
+
       <Footer/>
 
     </div>
