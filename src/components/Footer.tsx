@@ -1,5 +1,4 @@
-//import { Instagram, Facebook } from "lucide-react"
- import { FaInstagram, FaFacebookF } from "react-icons/fa"
+import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa"
 import "../styles/footer.css"
 
 export default function Footer(){
@@ -28,6 +27,15 @@ rel="noreferrer"
 >
 <FaFacebookF size={16}/>
 <span>Facebook</span>
+</a>
+
+<a
+href="https://www.youtube.com/@WongKarateKobudoDojo"
+target="_blank"
+rel="noreferrer"
+>
+<FaYoutube size={18}/>
+<span>YouTube</span>
 </a>
 
 </div>

@@ -110,10 +110,6 @@ export default function VideoLibrary(){
                   alt={video.title}
                 />
 
-                <div className="play-icon-small">
-                  ▶
-                </div>
-
               </div>
 
               <div className="video-item-info">

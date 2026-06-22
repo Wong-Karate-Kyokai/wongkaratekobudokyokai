@@ -201,8 +201,12 @@ height:320px;
 }
 
 .home-news-grid{
-grid-template-columns:1fr 1fr;
+grid-template-columns:1fr;
 gap:18px;
+}
+
+.home-news-card:nth-child(n+3){
+display:none;
 }
 
 .home-news-footer{

@@ -60,19 +60,12 @@ transition:.3s;
 color:#9d1d1d;
 }
 
+.social-text{
+display:inline;
+}
+
 @media(max-width:768px){
 
-.footer{
-padding:50px 20px 40px;
-}
-
-.footer-title{
-font-size:1.8rem;
-}
-
-.footer-social{
-gap:22px;
-flex-wrap:wrap;
-}
-
+.social-text{
+display:inline;
 }
