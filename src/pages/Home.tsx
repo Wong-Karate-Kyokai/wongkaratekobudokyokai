@@ -45,11 +45,11 @@ export default function Home(){
 
       <Hero/>
 
-      <HomeNews/>
-
       <About/>
 
       <VideoLibrary/>
+
+      <HomeNews/>
 
       <HireSection/>
 

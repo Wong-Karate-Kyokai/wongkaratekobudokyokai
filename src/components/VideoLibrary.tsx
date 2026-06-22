@@ -19,14 +19,13 @@ const videos = [
 
   {
     id: "yzUfkGJjFU4",
-    title: "DEMONSTRAÇÃO DE KARATE NA ALESP 2019"
+    title: "DEMONSTRAÇÃO DE KARATE NA ALESP"
   },
 
   {
     id: "wAlmzkxAN9o",
-    title: "JUBILEU DE OURO SHIN SHU KAN"
-  },
-
+    title: "JUBILEU DE OURO SHINSHUKAN"
+  }
 
 ]
 
@@ -47,16 +46,23 @@ export default function VideoLibrary(){
 
   return(
 
-    <section id="video" className="video-library">
+    <section
+      id="video"
+      className="video-library"
+    >
 
       <div className="video-header">
 
+        <span className="video-label">
+          ACERVO AUDIOVISUAL
+        </span>
+
         <h2 className="video-title">
-          Vídeos do Sensei
+          Vídeos e Entrevistas
         </h2>
 
         <p className="video-subtitle">
-          Demonstrações, entrevistas, apresentações e conteúdos sobre Karate-Do tradicional.
+          Demonstrações, entrevistas, palestras e registros da trajetória do Sensei Rogério Wong.
         </p>
 
       </div>
@@ -68,16 +74,24 @@ export default function VideoLibrary(){
           onClick={() => handleOpen(mainVideo.id)}
         >
 
-          <img
-            src={`https://img.youtube.com/vi/${mainVideo.id}/maxresdefault.jpg`}
-            alt={mainVideo.title}
-          />
+          <div className="video-main-thumb">
 
-          <div className="video-overlay">
+            <img
+              src={`https://img.youtube.com/vi/${mainVideo.id}/maxresdefault.jpg`}
+              alt={mainVideo.title}
+            />
 
-            <div className="video-info">
-              <p>{mainVideo.title}</p>
+            <div className="play-icon">
+              ▶
             </div>
+
+          </div>
+
+          <div className="video-info">
+
+            <p>
+              {mainVideo.title}
+            </p>
 
           </div>
 
@@ -100,10 +114,18 @@ export default function VideoLibrary(){
                   alt={video.title}
                 />
 
+                <div className="play-icon-small">
+                  ▶
+                </div>
+
               </div>
 
               <div className="video-item-info">
-                <p>{video.title}</p>
+
+                <p>
+                  {video.title}
+                </p>
+
               </div>
 
             </div>
@@ -114,18 +136,21 @@ export default function VideoLibrary(){
 
       </div>
 
-      <button
-        type="button"
-        className="youtube-btn"
-        onClick={() =>
-          window.open(
-            "https://www.youtube.com/@WongKarateKyokai-oficial/videos",
-            "_blank"
-          )
-        }
-      >
-        Ver canal no YouTube
-      </button>
+      <div className="youtube-footer">
+
+        <button
+          className="youtube-btn"
+          onClick={() =>
+            window.open(
+              "https://www.youtube.com/@WongKarateKyokai-oficial/videos",
+              "_blank"
+            )
+          }
+        >
+          VISITAR CANAL NO YOUTUBE
+        </button>
+
+      </div>
 
     </section>
 

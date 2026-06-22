@@ -9,9 +9,9 @@
   padding:0 8%;
 
   background-color:black;
-  background-image:url("../assets/images/6.png");
+  background-image:url("../assets/images/teste.png");
   background-repeat:no-repeat;
-  background-position:right center;
+  background-position:86% center ;
   background-size:contain;
 
   color:white;
@@ -99,22 +99,16 @@
 
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
 
   .hero{
 
     height:auto;
     min-height:420px;
-
     padding:100px 16px 60px;
-
     background-size:cover;
-    background-position:center;
-
+    /* background-position:center center; */
     justify-content:center;
-
     position:relative;
 
   }

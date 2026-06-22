@@ -145,12 +145,12 @@ export default function HireSection(){
             onChange={handleChange}
           >
             <option value="">Selecione o assunto</option>
-            <option value="Treinamento para exame de faixa">Treinamento para exame de faixa</option>
-            <option value="Seminário">Seminário</option>
+            <option value="Treinamento Preparatório para Graduação">Treinamento Preparatório para Graduação</option>
+            <option value="Seminário/Curso">Seminário/Curso</option>
             <option value="Aula de defesa pessoal individual">Aula de defesa pessoal individual</option>
             <option value="Aula de defesa pessoal coletiva">Aula de defesa pessoal coletiva</option>
-            <option value="Entrevista">Entrevista</option>
-            <option value="Podcast">Podcast</option>
+            <option value="Convidar para entrevista">Convidar para entrevista</option>
+            <option value="Convidar para podcast">Convidar para podcast</option>
           </select>
           {errors.assunto && <span className="error">{errors.assunto}</span>}
         </div>
