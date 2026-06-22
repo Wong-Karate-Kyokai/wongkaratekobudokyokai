@@ -21,7 +21,7 @@ export default function Hero(){
         </p>
 
         <a href="#contato" className="seminar-btn">
-          AGENDAR SEMINÁRIO
+          CONTATO E CONVITES
         </a>
 
       </div>

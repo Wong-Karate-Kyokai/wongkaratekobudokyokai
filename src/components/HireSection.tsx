@@ -1,172 +1,166 @@
-import { useState, useEffect, type ChangeEvent, type FormEvent } from "react"
+import { useEffect } from "react"
+
 import "../styles/hire.css"
-
-interface FormState {
-  nome: string;
-  cidade: string;
-  pais: string;
-  email: string;
-  assunto: string;
-  mensagem: string;
-}
-
-interface FormErrors {
-  nome?: string;
-  cidade?: string;
-  pais?: string;
-  email?: string;
-  assunto?: string;
-  mensagem?: string;
-}
 
 export default function HireSection(){
 
-  const [form, setForm] = useState<FormState>({
-    nome: "",
-    cidade: "",
-    pais: "",
-    email: "",
-    assunto: "",
-    mensagem: ""
-  })
-
-  const [errors, setErrors] = useState<FormErrors>({})
-
-  // Tipamos o evento de mudança para aceitar input, select e textarea
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    
-    setForm({
-      ...form,
-      [name]: value
-    })
-
-    setErrors({
-      ...errors,
-      [name]: ""
-    })
-  }
-
-  const validate = () => {
-    const newErrors: FormErrors = {}
-
-    if(!form.nome) newErrors.nome = "Preencha seu nome"
-    if(!form.cidade) newErrors.cidade = "Preencha sua cidade"
-    if(!form.pais) newErrors.pais = "Preencha o país"
-    if(!form.email) newErrors.email = "Preencha o e-mail"
-    if(!form.assunto) newErrors.assunto = "Selecione um assunto"
-    if(!form.mensagem) newErrors.mensagem = "Escreva uma mensagem"
-
-    return newErrors
-  }
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault()
-
-    const validationErrors = validate()
-
-    if(Object.keys(validationErrors).length > 0){
-      setErrors(validationErrors)
-      return
-    }
-
-    alert("Solicitação enviada com sucesso!")
-  }
-
   useEffect(() => {
+
     const elements = document.querySelectorAll(".fade-in")
 
     const observer = new IntersectionObserver(
-      (entries) => {
+
+      entries => {
+
         entries.forEach(entry => {
+
           if(entry.isIntersecting){
+
             entry.target.classList.add("show")
+
           }
+
         })
+
       },
-      { threshold: 0.2 }
+
+      {
+        threshold:.2
+      }
+
     )
 
-    elements.forEach(el => observer.observe(el))
+    elements.forEach(
+      element => observer.observe(element)
+    )
 
     return () => observer.disconnect()
-  }, [])
+
+  },[])
 
   return(
-    <section id="contato" className="hire">
-      <h2 className="fade-in">Entre em contato</h2>
 
-      <form className="hire-grid fade-in" onSubmit={handleSubmit}>
-        <div>
-          <input 
+    <section
+      id="contato"
+      className="hire"
+    >
+
+      <div className="hire-container">
+
+        <div className="hire-header fade-in">
+          <h2>
+            Entre em Contato
+          </h2>
+
+          <p>
+            Utilize este espaço para entrar em contato a respeito de treinamentos preparatórios para graduação, seminários, cursos, aulas de defesa pessoal, entrevistas e demais atividades conduzidas pelo Sensei Rogério Wong.
+          </p>
+
+        </div>
+
+        <form
+          action="https://formsubmit.co/contato@wongkaratekobudo.com"
+          method="POST"
+          className="hire-form fade-in"
+        >
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="Novo contato pelo site Wong Karate Kobu-Do"
+          />
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          />
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          />
+
+          <input
+            type="text"
+            name="Nome"
             placeholder="Nome"
-            name="nome"
-            value={form.nome}
-            onChange={handleChange}
+            required
           />
-          {errors.nome && <span className="error">{errors.nome}</span>}
-        </div>
 
-        <div>
-          <input 
-            placeholder="Cidade"
-            name="cidade"
-            value={form.cidade}
-            onChange={handleChange}
-          />
-          {errors.cidade && <span className="error">{errors.cidade}</span>}
-        </div>
-
-        <div>
-          <input 
-            placeholder="País"
-            name="pais"
-            value={form.pais}
-            onChange={handleChange}
-          />
-          {errors.pais && <span className="error">{errors.pais}</span>}
-        </div>
-
-        <div>
-          <input 
-            placeholder="E-mail"
+          <input
             type="email"
-            name="email"
-            value={form.email}
-            onChange={handleChange}
+            name="Email"
+            placeholder="E-mail"
+            required
           />
-          {errors.email && <span className="error">{errors.email}</span>}
-        </div>
 
-        <div className="full">
+          <input
+            type="text"
+            name="Cidade"
+            placeholder="Cidade"
+            required
+          />
+
+          <input
+            type="text"
+            name="Pais"
+            placeholder="País"
+            required
+          />
+
           <select
-            name="assunto"
-            value={form.assunto}
-            onChange={handleChange}
+            name="Assunto"
+            required
           >
-            <option value="">Selecione o assunto</option>
-            <option value="Treinamento Preparatório para Graduação">Treinamento Preparatório para Graduação</option>
-            <option value="Seminário/Curso">Seminário/Curso</option>
-            <option value="Aula de defesa pessoal individual">Aula de defesa pessoal individual</option>
-            <option value="Aula de defesa pessoal coletiva">Aula de defesa pessoal coletiva</option>
-            <option value="Convidar para entrevista">Convidar para entrevista</option>
-            <option value="Convidar para podcast">Convidar para podcast</option>
+
+            <option value="">
+              Selecione o assunto
+            </option>
+
+            <option value="Treinamento Preparatório para Graduação">
+              Treinamento Preparatório para Graduação
+            </option>
+
+            <option value="Seminário/Curso">
+              Seminário/Curso
+            </option>
+
+            <option value="Aula de defesa pessoal individual">
+              Aula de defesa pessoal individual
+            </option>
+
+            <option value="Aula de defesa pessoal coletiva">
+              Aula de defesa pessoal coletiva
+            </option>
+
+            <option value="Convidar para entrevista">
+              Convidar para entrevista
+            </option>
+
+            <option value="Convidar para podcast">
+              Convidar para podcast
+            </option>
+
           </select>
-          {errors.assunto && <span className="error">{errors.assunto}</span>}
-        </div>
 
-        <div className="full">
-          <textarea 
+          <textarea
+            name="Mensagem"
             placeholder="Mensagem"
-            name="mensagem"
-            value={form.mensagem}
-            onChange={handleChange}
+            required
           />
-          {errors.mensagem && <span className="error">{errors.mensagem}</span>}
-        </div>
 
-        <button type="submit">Enviar solicitação</button>
-      </form>
+          <button type="submit">
+            ENVIAR MENSAGEM
+          </button>
+
+        </form>
+
+      </div>
+
     </section>
+
   )
+
 }
