@@ -77,10 +77,6 @@ export default function VideoLibrary(){
               alt={mainVideo.title}
             />
 
-            <div className="play-icon">
-              ▶
-            </div>
-
           </div>
 
           <div className="video-info">
