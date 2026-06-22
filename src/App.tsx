@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import Home from "./pages/Home"
 import About from "./pages/About"
-import Karate from "./pages/Karate"
+import Karate from "./pages/KaratePage"
 import Videos from "./pages/Videos"
 import Contact from "./pages/Contact"
 import Gallery from "./pages/Gallery"
