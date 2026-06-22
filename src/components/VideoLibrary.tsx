@@ -4,7 +4,7 @@ const videos = [
 
   {
     id: "dVw07IDIiQY",
-    title: "REVISTA MASTER OFICIAL"
+    title: ""
   },
 
   {
@@ -60,10 +60,6 @@ export default function VideoLibrary(){
         <h2 className="video-title">
           Vídeos e Entrevistas
         </h2>
-
-        <p className="video-subtitle">
-          Demonstrações, entrevistas, palestras e registros da trajetória do Sensei Rogério Wong.
-        </p>
 
       </div>
 

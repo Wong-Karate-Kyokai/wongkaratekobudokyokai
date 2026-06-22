@@ -9,161 +9,159 @@ import "../styles/newsDetails.css"
 
 export default function NewsDetails(){
 
-const { slug } = useParams()
+  const { slug } = useParams()
 
-const article = news.find(
-item => item.slug === slug
-)
+  const article = news.find(
+    item => item.slug === slug
+  )
 
-if(!article){
-return(
+  if(!article){
 
-  <div>
+    return(
 
-    <Navbar/>
+      <div>
 
-    <section className="details-page">
+        <Navbar/>
 
-      <div className="details-container">
+        <section className="details-page">
 
-        <h1>
-          Notícia não encontrada
-        </h1>
+          <div className="details-container">
 
-      </div>
+            <h1>
+              Notícia não encontrada
+            </h1>
 
-    </section>
+          </div>
 
-    <Footer/>
+        </section>
 
-  </div>
-
-)
-
-}
-
-return(
-
-<div>
-
-  <Navbar/>
-
-  <section className="details-page">
-
-    <div className="details-container">
-
-      <div className="details-header">
-
-        <div className="details-meta">
-
-          <span>{article.date}</span>
-
-          <span className="dot"></span>
-
-          <span>{article.location}</span>
-
-        </div>
-
-        <h1>
-          {article.title}
-        </h1>
-
-        <p>
-          {article.subtitle}
-        </p>
+        <Footer/>
 
       </div>
 
-      <div className="details-cover">
+    )
 
-        <img
-          src={article.cover}
-          alt={article.title}
-        />
+  }
 
-      </div>
+  return(
 
-      <div className="details-content">
+    <div>
 
-        {article.content
-          .split("\n")
-          .filter(text => text.trim() !== "")
-          .map((paragraph, index) => (
+      <Navbar/>
 
-            <p key={index}>
-              {paragraph}
+      <section className="details-page">
+
+        <div className="details-container">
+
+          <div className="details-header">
+
+            <div className="details-meta">
+
+              <span>{article.date}</span>
+
+              <span className="dot"></span>
+
+              <span>{article.location}</span>
+
+            </div>
+
+            <h1>
+              {article.title}
+            </h1>
+
+            <p>
+              {article.subtitle}
             </p>
 
-          ))}
+          </div>
 
-        {article.gallery?.length > 0 && (
+          <div className="details-cover">
 
-          <div className="details-gallery">
+            <img
+              src={article.cover}
+              alt={article.title}
+            />
 
-            {article.gallery.map((photo, index) => (
+          </div>
 
-              <img
-                key={index}
-                src={photo}
-                alt={`${article.title} ${index + 1}`}
-              />
+          <div className="details-content">
+
+            {article.content
+              .split("\n")
+              .filter(text => text.trim() !== "")
+              .map((paragraph, index) => (
+
+                <p key={index}>
+                  {paragraph}
+                </p>
 
             ))}
 
           </div>
 
-        )}
+          {(article.gallery?.length > 0 || article.videos?.length > 0) && (
 
-        {article.videos?.length > 0 && (
+            <div className="details-media">
 
-          <div className="details-videos">
+              <h2 className="media-title">
+                Galeria do Evento
+              </h2>
 
-            <h2 className="videos-title">
-              Vídeos do Evento
-            </h2>
+              <div className="media-grid">
 
-            <div className="videos-grid">
+                {article.gallery?.map((photo, index) => (
 
-              {article.videos.map((video, index) => (
+                  <div
+                    key={`photo-${index}`}
+                    className="media-item"
+                  >
 
-                <a
-                  key={index}
-                  href={`https://www.youtube.com/watch?v=${video}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="video-card"
-                >
+                    <img
+                      src={photo}
+                      alt={`${article.title} ${index + 1}`}
+                    />
 
-                  <img
-                    src={`https://img.youtube.com/vi/${video}/hqdefault.jpg`}
-                    alt="Vídeo do YouTube"
-                  />
-
-                  <div className="play-button">
-                    ▶
                   </div>
 
-                </a>
+                ))}
 
-              ))}
+                {article.videos?.map((video, index) => (
+
+                  <a
+                    key={`video-${index}`}
+                    href={`https://www.youtube.com/watch?v=${video}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="media-item video"
+                  >
+
+                    <img
+                      src={`https://img.youtube.com/vi/${video}/hqdefault.jpg`}
+                      alt="Vídeo do Evento"
+                    />
+
+                    <div className="play-button">
+                      ▶
+                    </div>
+
+                  </a>
+
+                ))}
+
+              </div>
 
             </div>
 
-          </div>
+          )}
 
-        )}
+        </div>
 
-      </div>
+      </section>
+
+      <Footer/>
 
     </div>
 
-  </section>
-
-  <Footer/>
-
-</div>
-
-
-)
+  )
 
 }

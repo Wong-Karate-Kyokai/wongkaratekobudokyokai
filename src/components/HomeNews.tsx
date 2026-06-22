@@ -8,7 +8,7 @@ export default function HomeNews(){
 
   const featured = news[0]
 
-  const secondary = news.slice(1,4)
+  const secondary = news.slice(1, 6)
 
   return(
 
@@ -18,19 +18,13 @@ export default function HomeNews(){
 
         <div className="home-news-header">
 
-          <div>
-            <h2 className="home-news-title">
-              Últimas Notícias
-            </h2>
+          <span className="home-news-tag">
+            NOTÍCIAS E EVENTOS
+          </span>
 
-          </div>
-
-          <Link
-            to="/noticias"
-            className="home-news-button"
-          >
-            Ver todas
-          </Link>
+          <h2 className="home-news-title">
+            Últimas Notícias
+          </h2>
 
         </div>
 
@@ -82,36 +76,37 @@ export default function HomeNews(){
               className="home-news-card"
             >
 
-              <div className="home-news-card-image">
-
-                <img
-                  src={item.cover}
-                  alt={item.title}
-                />
-
-              </div>
+              <img
+                src={item.cover}
+                alt={item.title}
+              />
 
               <div className="home-news-card-content">
-
-                <div className="home-news-meta">
-
-                  <span>{item.date}</span>
-
-                  <span className="dot"></span>
-
-                  <span>{item.location}</span>
-
-                </div>
 
                 <h4>
                   {item.title}
                 </h4>
+
+                <span>
+                  {item.date}
+                </span>
 
               </div>
 
             </Link>
 
           ))}
+
+        </div>
+
+        <div className="home-news-footer">
+
+          <Link
+            to="/noticias"
+            className="home-news-button"
+          >
+            Ver todas as notícias
+          </Link>
 
         </div>
 

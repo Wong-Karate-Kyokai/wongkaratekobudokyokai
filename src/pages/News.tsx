@@ -25,13 +25,19 @@ export default function News(){
 
           <div className="news-header">
 
-            <p className="news-tag">
+            <span className="news-tag">
               PORTAL DE NOTÍCIAS
-            </p>
+            </span>
 
             <h1 className="news-title">
               Notícias e Eventos
             </h1>
+
+            <p className="news-description">
+              Acompanhe seminários, cursos, graduações,
+              torneios, homenagens e eventos relacionados
+              ao Karate-Do e Kobu-Do Shinshukan.
+            </p>
 
           </div>
 
@@ -79,7 +85,7 @@ export default function News(){
 
           <div className="news-grid">
 
-            {secondary.map((item, index) => (
+            {secondary.map((item,index)=>(
 
               <Link
                 key={index}
