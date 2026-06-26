@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
-import "../styles/gallery.css"
+import "../styles/galleryPage.css"
 
 const photos = [
 

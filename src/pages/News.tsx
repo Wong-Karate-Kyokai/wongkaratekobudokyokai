@@ -5,7 +5,7 @@ import Footer from "../components/Footer"
 
 import { news } from "../data/newsData"
 
-import "../styles/news.css"
+import "../styles/newsPage.css"
 
 export default function News(){
 

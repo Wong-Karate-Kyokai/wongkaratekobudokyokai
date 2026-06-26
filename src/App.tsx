@@ -5,7 +5,7 @@ import About from "./pages/About"
 import Karate from "./pages/KaratePage"
 import Videos from "./pages/Videos"
 import Contact from "./pages/Contact"
-import Gallery from "./pages/Gallery"
+import Gallery from "./pages/GalleryPage"
 import News from "./pages/News"
 import NewsDetails from "./pages/NewsDetails"
 
