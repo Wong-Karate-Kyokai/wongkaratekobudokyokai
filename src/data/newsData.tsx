@@ -92,9 +92,291 @@ import seminarioMg2 from "../assets/images/seminarioUberaba/2.png"
 import seminarioMg3 from "../assets/images/seminarioUberaba/3.png"
 import master from "../assets/images/master/1.png"
 import marilia from "../assets/images/Marilia/1.png"
+import goiania1 from "../assets/images/goiania/1.png"
+import goiania2 from "../assets/images/goiania/2.png"
+import goiania3 from "../assets/images/goiania/3.png"
+import goiania4 from "../assets/images/goiania/4.png"
+import goiania5 from "../assets/images/goiania/5.png"
+import goiania6 from "../assets/images/goiania/6.png"
+import goiania7 from "../assets/images/goiania/7.png"
+import goiania8 from "../assets/images/goiania/8.png"
+import goiania9 from "../assets/images/goiania/9.png"
+
+import kodansha1 from "../assets/images/kodansha/1.png"
+import kodansha2 from "../assets/images/kodansha/2.png"
+import kodansha3 from "../assets/images/kodansha/3.png"
+import kodansha4 from "../assets/images/kodansha/4.png"
+import kodansha5 from "../assets/images/kodansha/5.png"
+import kodansha6 from "../assets/images/kodansha/6.png"
+import kodansha7 from "../assets/images/kodansha/7.png"
+import kodansha8 from "../assets/images/kodansha/8.png"
+import kodansha9 from "../assets/images/kodansha/9.png"
+
+import mulher1 from "../assets/images/mulher/1.png"
+import mulher2 from "../assets/images/mulher/2.png"
+import mulher3 from "../assets/images/mulher/3.png"
+import mulher4 from "../assets/images/mulher/4.png"
+import mulher5 from "../assets/images/mulher/5.png"
+import mulher6 from "../assets/images/mulher/6.png"
+import mulher7 from "../assets/images/mulher/7.png"
+import mulher8 from "../assets/images/mulher/8.png"
+import mulher9 from "../assets/images/mulher/9.png"
+import mulher10 from "../assets/images/mulher/10.png"
+
+import james1 from "../assets/images/james/1.png"
+import james2 from "../assets/images/james/2.png"
+import james3 from "../assets/images/james/3.png"
+import james4 from "../assets/images/james/4.png"
+
+import praticante1 from "../assets/images/praticante/1.png"
+import praticante2 from "../assets/images/praticante/2.png"
+import praticante3 from "../assets/images/praticante/3.png"
+import praticante4 from "../assets/images/praticante/4.png"
+import praticante5 from "../assets/images/praticante/5.png"
+import praticante6 from "../assets/images/praticante/6.png"
+import praticante7 from "../assets/images/praticante/7.png"
+import praticante8 from "../assets/images/praticante/8.png"
+
+import uberaba1 from "../assets/images/uberaba/1.png"
+import uberaba2 from "../assets/images/uberaba/2.png"
+import uberaba3 from "../assets/images/uberaba/3.png"
+import uberaba4 from "../assets/images/uberaba/4.png"
+import uberaba5 from "../assets/images/uberaba/5.png"
+import uberaba6 from "../assets/images/uberaba/6.png"
+import uberaba7 from "../assets/images/uberaba/7.png"
+import uberaba8 from "../assets/images/uberaba/8.png"
+
 
 
 export const news = [
+
+  {
+  slug:"seminario-shinshukan-uberaba-2026",
+
+  title:
+    "Seminário de Karate-Do e Kobu-Do Shinshukan é realizado em Uberaba",
+
+  subtitle:
+    "Evento reuniu mais de 100 atletas e professores para um dia de treinamento técnico e integração.",
+
+  date:
+    "Junho • 2026",
+
+  location:
+    "Uberaba • MG",
+
+  cover:
+    uberaba1,
+
+  content:
+  `No dia 13 de junho, foi realizado em Uberaba (MG) o Seminário de Karate-Do e Kobu-Do Shinshukan.
+
+  O evento reuniu mais de 100 atletas e professores, contando com as presenças dos Senseis Mitsuhide Shinzato, Rogério Wong e Marco Teixeira.
+
+  A organização ficou a cargo do Sensei Amarildo de Souza, com o apoio do Instituto Mãos Solidárias, proporcionando um importante momento de aperfeiçoamento técnico, integração e confraternização entre os participantes.`,
+
+  gallery:[
+    uberaba1,
+    uberaba2,
+    uberaba3,
+    uberaba4,
+    uberaba5,
+    uberaba6,
+    uberaba7,
+    uberaba8
+  ],
+
+    videos:[]
+  },
+
+  {
+  slug:"dia-do-praticante-de-karate-2026",
+
+  title:
+    "Dia do Praticante de Karate reúne centenas de participantes em Santos",
+
+  subtitle:
+    "Evento promovido pela escola Shinshukan contou com cerca de 300 praticantes de Karate-Do e Kobu-Do.",
+
+  date:
+    "Junho • 2026",
+
+  location:
+    "Santos • SP",
+
+  cover:
+    praticante1,
+
+  content:
+    `No dia 6 de junho, foi realizada a comemoração do Dia do Praticante de Karate, na Praia do Gonzaga, em Santos (SP).
+
+    O evento reuniu cerca de 300 praticantes de Karate-Do e Kobu-Do de diversas cidades do Brasil, além da presença do representante da escola Shinshukan nos Estados Unidos, Sensei James Moore, de Las Vegas (EUA).
+
+    A comemoração foi organizada pela escola Shinshukan, com o apoio da Prefeitura de Santos, proporcionando um momento de integração, valorização da prática do Karate-Do e fortalecimento da amizade entre os participantes.`,
+
+  gallery:[
+    praticante1,
+    praticante2,
+    praticante3,
+    praticante4,
+    praticante5,
+    praticante6,
+    praticante7,
+    praticante8
+  ],
+
+  videos:[]
+  },
+
+  {
+  slug:"momento-impar-sensei-james-moore",
+
+  title:
+    "Momento ímpar com o Sensei James Moore durante visita ao Brasil",
+
+  subtitle:
+    "Representante da escola Shinshukan nos Estados Unidos recebeu homenagem do Wong Karate Kobudo Dojo.",
+
+  date:
+    "Junho • 2026",
+
+  location:
+    "Santos • SP",
+
+  cover:
+    james1,
+
+  content:
+    `Um momento ímpar marcou a visita ao Brasil do amigo e Sensei James Moore, de Las Vegas (EUA), representante da escola Shinshukan nos Estados Unidos e aluno do nosso Grão-Mestre Yoshihide Shinzato na década de 1970.
+
+    Sensei James Moore veio ao Brasil para participar das comemorações do Dia do Praticante de Karate, realizado na cidade de Santos (SP).
+
+    Na oportunidade, no dia 5 de junho, durante um almoço, tive o prazer de entregar uma justa e merecida homenagem, em nome do Wong Karate Kobudo Dojo, ao amigo e Sensei James Moore, em reconhecimento à sua trajetória, amizade e dedicação ao Karate-Do e ao Kobu-Do.`,
+
+  gallery:[
+    james1,
+    james2,
+    james3,
+    james4
+  ],
+
+    videos:[]
+  },
+
+  {
+  slug:"dia-internacional-da-mulher-2026",
+
+  title:
+    "Comemoração do Dia Internacional da Mulher reúne praticantes em Praia Grande",
+
+  subtitle:
+    "Evento promovido pela escola Shinshukan reuniu mais de 100 mulheres praticantes de Karate-Do e Kobu-Do.",
+
+  date:
+    "Março • 2026",
+
+  location:
+    "Praia Grande • SP",
+
+  cover:
+    mulher1,
+
+  content:
+`No dia 7 de março de 2026, foi realizado no Ginásio Rodrigão, em Praia Grande (SP), o evento em comemoração ao Dia Internacional da Mulher, organizado pela escola Shinshukan.
+
+O encontro reuniu mais de 100 mulheres praticantes de Karate-Do e Kobu-Do, celebrando a data por meio da prática das artes marciais, da integração entre as participantes e da valorização do papel da mulher no Karate.`,
+
+  gallery:[
+    mulher1,
+    mulher2,
+    mulher3,
+    mulher4,
+    mulher5,
+    mulher6,
+    mulher7,
+    mulher8,
+    mulher9,
+    mulher10
+  ],
+
+    videos:[]
+  },
+
+  {
+  slug:"encontro-brasil-kodanshas-2026",
+
+  title:
+    "Encontro Brasil de Kodanshas 2026 reúne faixas corais da escola Shinshukan",
+
+  subtitle:
+    "Evento reuniu cerca de 50 Kodanshas de diversos estados para aperfeiçoamento técnico e confraternização.",
+
+  date:
+    "Março • 2026",
+
+  location:
+    "São Paulo • SP",
+
+  cover:
+    kodansha1,
+
+  content:
+    `No dia 28 de março, foi realizado na matriz da escola Shinshukan de Karate-Do e Kobu-Do o Encontro Brasil de Kodanshas 2026, reunindo faixas corais das graduações de 7º, 8º e 9º Dan de Karate-Do e Kobu-Do.
+
+    O evento contou com a participação de cerca de 50 Kodanshas de diversos estados do Brasil, proporcionando aperfeiçoamento técnico, padronização dos ensinamentos e momentos de confraternização entre os participantes.`,
+
+  gallery:[
+    kodansha1,
+    kodansha2,
+    kodansha3,
+    kodansha4,
+    kodansha5,
+    kodansha6,
+    kodansha7,
+    kodansha8,
+    kodansha9
+  ],
+
+  videos:[]
+  },
+
+  {
+  slug:"seminario-goiania",
+
+  title:
+    "Seminário de Karate-Do e Kobu-Do e Exame de Graduação em Goiânia",
+
+  subtitle:
+    "Evento reuniu professores e atletas de diversos estados para treinamentos técnicos e exame de graduação da escola Shinshukan.",
+
+  date:
+    "Fevereiro • 2026",
+
+  location:
+    "Goiânia • GO",
+
+  cover:
+    goiania1,
+
+  content:
+    `Em fevereiro, foi realizado o Seminário de Karate-Do e Kobu-Do e o Exame de Graduação de Karate Shinshukan, em Goiânia (GO). O evento foi organizado pelo Sensei Washington Macedo, 8º Dan, e realizado nas dependências do Clube dos Funcionários da Caixa Econômica Federal.
+
+    O encontro reuniu atletas e professores de Goiânia (GO), Uberaba (MG), Cuiabá (MT), Niterói (RJ), Blumenau (SC) e São Paulo (SP), proporcionando treinamentos técnicos e momentos de confraternização entre os participantes.`,
+
+  gallery:[
+    goiania1,
+    goiania2,
+    goiania3,
+    goiania4,
+    goiania5,
+    goiania6,
+    goiania7,
+    goiania8,
+    goiania9
+  ],
+
+  videos:[]
+  },
 
   {
     slug: "seminarios-no-japao",
