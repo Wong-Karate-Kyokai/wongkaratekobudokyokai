@@ -47,9 +47,9 @@ export default function Home(){
 
       <About/>
 
-      <VideoLibrary/>
-
       <HomeNews/>
+      
+      <VideoLibrary/>
 
       <HireSection/>
 

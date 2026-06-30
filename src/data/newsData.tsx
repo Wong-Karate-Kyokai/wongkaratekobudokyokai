@@ -146,9 +146,65 @@ import uberaba6 from "../assets/images/uberaba/6.png"
 import uberaba7 from "../assets/images/uberaba/7.png"
 import uberaba8 from "../assets/images/uberaba/8.png"
 
+import julho from "../assets/images/inscricoes/julho.png"
+
 
 
 export const news = [
+
+  {
+    slug: "aula-de-karate-julho-2026",
+
+    title:
+      "Inscrições abertas para Aula de Karate-Do com Sensei Rogério Wong",
+
+    subtitle:
+      "Treinamento técnico com vagas limitadas será realizado em Santos no dia 04 de julho de 2026.",
+
+    date:
+      "Julho • 2026",
+
+    location:
+      "Santos • SP",
+
+    cover:
+      julho,
+
+      buttonText: "Fazer inscrição",
+
+      buttonLink:
+         "https://docs.google.com/forms/d/e/1FAIpQLSdP9DYGt6qhE89LEMQIiqeRBqWJf7kWou39xvwQjjSoqZOa9A/viewform",
+
+    content:
+      `Estão abertas as inscrições para a Aula de Karate-Do ministrada pelo Sensei Rogério Wong, que será realizada no dia 04 de julho de 2026, das 9h às 11h, na Rua Euclydes da Cunha, 246, Pompéia, Santos/SP.
+
+      O investimento para participação é de R$ 60,00.
+
+      A aula possui limite máximo de 15 participantes, garantindo melhor acompanhamento técnico e qualidade no aprendizado. As inscrições funcionarão como lista de espera e serão confirmadas por ordem cronológica de preenchimento, mediante confirmação de interesse e pagamento.
+
+      Requisitos para participação:
+
+      • Disponibilidade para a data e horário da aula;
+      • Graduação mínima de 4º Kyu (Faixa Azul).
+
+      Durante o treinamento serão abordados importantes fundamentos do Karate-Do, entre eles:
+
+      • Maai – ajuste da distância em relação ao oponente;
+      • Kime – decisão, determinação e máxima concentração no momento do impacto;
+      • Koshi Waza – movimentação, utilização e fortalecimento dos quadris;
+      • Kansetsu Waza – técnicas de defesa pessoal com torções e contusões aplicadas às articulações;
+      • Kata e Bunkai Kata – prática das formas e suas aplicações.
+
+      Será uma excelente oportunidade para aprofundar os conhecimentos técnicos, compartilhar experiências e fortalecer os laços de amizade e o verdadeiro espírito do Karate-Do.`,
+
+    gallery: [
+    julho
+    ],
+
+    videos: [
+      "5Y3DMjYxctU"
+    ]
+  },
 
   {
   slug:"seminario-shinshukan-uberaba-2026",

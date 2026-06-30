@@ -7,7 +7,7 @@ import { news } from "../data/newsData"
 
 import "../styles/newsDetailsPage.css"
 
-export default function NewsDetails(){
+export default function NewsDetails() {
 
   const { slug } = useParams()
 
@@ -15,13 +15,13 @@ export default function NewsDetails(){
     item => item.slug === slug
   )
 
-  if(!article){
+  if (!article) {
 
-    return(
+    return (
 
       <div>
 
-        <Navbar/>
+        <Navbar />
 
         <section className="details-page">
 
@@ -35,7 +35,7 @@ export default function NewsDetails(){
 
         </section>
 
-        <Footer/>
+        <Footer />
 
       </div>
 
@@ -43,11 +43,11 @@ export default function NewsDetails(){
 
   }
 
-  return(
+  return (
 
     <div>
 
-      <Navbar/>
+      <Navbar />
 
       <section className="details-page">
 
@@ -95,9 +95,26 @@ export default function NewsDetails(){
                   {paragraph}
                 </p>
 
-            ))}
+              ))}
 
           </div>
+
+          {article.buttonLink && (
+
+            <div className="details-action">
+
+              <a
+                href={article.buttonLink}
+                target="_blank"
+                rel="noreferrer"
+                className="details-button"
+              >
+                {article.buttonText}
+              </a>
+
+            </div>
+
+          )}
 
           {(article.gallery?.length > 0 || article.videos?.length > 0) && (
 
@@ -158,7 +175,7 @@ export default function NewsDetails(){
 
       </section>
 
-      <Footer/>
+      <Footer />
 
     </div>
 
